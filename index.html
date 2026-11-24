@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ting Xu, PhD</title>
+<meta name="description" content="Ting Xu, PhD, is a Scientist at A*STAR, Singapore, studying technology use, child development, and family dynamics.">
+<meta name="author" content="Ting Xu">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ting Xu, PhD">
+<meta property="og:description" content="Scientist at A*STAR, Singapore. Research on technology use, child development, and family dynamics.">
+<meta property="og:image" content="https://ting-xu-research.github.io/photo.jpg">
+<meta property="og:url" content="https://ting-xu-research.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b5e66'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='white' text-anchor='middle'%3ETX%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: one calm reading column on white. A compact header (photo, name, links), a sticky section bar
+   for jumping around, then sections built as two-column "when | what" rows so every list scans down the left edge. */
+:root {
+  --bg: #ffffff;
+  --ink: #16212a;
+  --text: #2c3a44;
+  --muted: #5d6b75;
+  --rule: #e4e8eb;
+  --accent: #0b5e66;
+  --tint: #f2f7f7;
+  --f-display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --f-body: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: var(--f-body); font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+a { color: var(--accent); text-decoration: underline; text-decoration-color: rgba(11, 94, 102, .35); text-underline-offset: 3px; }
+a:hover { text-decoration-color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+img { max-width: 100%; }
+p { margin: 0; }
+b, strong { color: var(--ink); font-weight: 600; }
+
+.container { max-width: 880px; margin: 0 auto; padding-inline: 24px; }
+
+/* ---------- header ---------- */
+header.top { padding-block: 64px 40px; }
+.intro { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; align-items: center; }
+.portrait { width: 200px; aspect-ratio: 4 / 5; height: auto; object-fit: cover; border-radius: 10px; display: block; }
+.intro-text { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+h1 { font-family: var(--f-display); font-weight: 600; font-size: 3rem; line-height: 1; letter-spacing: -0.015em; color: var(--ink); margin: 0; }
+.title { font-size: 1.1rem; color: var(--ink); }
+.title span { color: var(--muted); }
+.tagline { color: var(--muted); max-width: 52ch; }
+.links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font: 500 0.92rem var(--f-body); color: var(--ink); text-decoration: none;
+  border: 1px solid var(--rule); border-radius: 8px; padding: 8px 14px; background: var(--bg); cursor: pointer;
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.primary:hover { color: #fff; filter: brightness(1.1); }
+.btn svg { width: 16px; height: 16px; flex: none; }
+.email-text { font-size: 0.92rem; color: var(--muted); user-select: all; }
+
+/* ---------- sticky section bar ---------- */
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: rgba(255, 255, 255, .94); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  border-block: 1px solid var(--rule);
+}
+.bar ul { list-style: none; margin: 0 auto; padding: 0; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.bar ul::-webkit-scrollbar { display: none; }
+.bar a { display: block; padding: 14px 12px; font-size: 0.9rem; font-weight: 500; color: var(--muted); text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.bar a:hover { color: var(--ink); }
+.bar a.on { color: var(--accent); border-bottom-color: var(--accent); }
+.bar li:first-child a { padding-left: 0; }
+
+/* ---------- sections ---------- */
+main { padding-block: 16px 40px; }
+section { padding-block: 56px; border-bottom: 1px solid var(--rule); }
+section:last-of-type { border-bottom: 0; }
+h2 { font-family: var(--f-display); font-weight: 600; font-size: 2rem; line-height: 1.15; color: var(--ink); margin: 0 0 28px; letter-spacing: -0.01em; }
+h3 { font-size: 1.02rem; font-weight: 600; color: var(--ink); margin: 0; line-height: 1.45; }
+.kicker { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.group-h { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 40px 0 16px; }
+.group-h:first-of-type { margin-top: 0; }
+
+/* about */
+.about { display: flex; flex-direction: column; gap: 22px; max-width: 68ch; }
+.about .block { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 20px; }
+.about .block .kicker { padding-top: 4px; }
+
+/* research */
+.focus { background: var(--tint); border-radius: 10px; padding: 24px 26px; display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
+.focus h3 { font-family: var(--f-display); font-size: 1.35rem; font-weight: 600; }
+.focus p { max-width: 64ch; }
+.themes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
+.theme { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.theme p { color: var(--muted); font-size: 0.96rem; }
+
+/* row lists (publications, talks, positions...) */
+.list { list-style: none; margin: 0; padding: 0; }
+.list > li { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 24px; padding-block: 18px; border-top: 1px solid var(--rule); }
+.list > li:first-child { border-top: 0; padding-top: 0; }
+.when { font-size: 0.9rem; font-weight: 500; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 2px; }
+.what { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.what p { color: var(--muted); font-size: 0.95rem; }
+.authors { font-size: 0.95rem; color: var(--muted); }
+.authors b { color: var(--ink); }
+.journal { font-size: 0.95rem; color: var(--ink); }
+.journal em { font-style: italic; }
+.paper-title { font-family: var(--f-display); font-size: 1.22rem; font-weight: 600; line-height: 1.3; color: var(--ink); margin: 0; }
+.paper-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-top: 6px; font-size: 0.9rem; }
+.paper-links a { font-weight: 500; }
+.badge { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.03em; color: var(--accent); background: var(--tint); border-radius: 4px; padding: 2px 8px; }
+.list.compact > li { padding-block: 12px; }
+.talk-title { color: var(--ink); }
+
+.cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; }
+.cols > div { min-width: 0; }
+.cols .list > li { grid-template-columns: 88px minmax(0, 1fr); gap: 16px; }
+.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.chips li { font-size: 0.88rem; color: var(--ink); background: var(--tint); border-radius: 6px; padding: 4px 10px; }
+
+/* contact */
+.contact { display: flex; flex-direction: column; gap: 18px; }
+.contact p { font-size: 1.1rem; max-width: 56ch; }
+footer { padding-block: 28px 48px; font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--rule); }
+
+@media (max-width: 720px) {
+  body { font-size: 16px; }
+  header.top { padding-block: 40px 28px; }
+  .intro { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .portrait { width: 150px; }
+  h1 { font-size: 2.4rem; }
+  section { padding-block: 44px; }
+  h2 { font-size: 1.7rem; }
+  .themes, .cols { grid-template-columns: minmax(0, 1fr); }
+  .cols { gap: 8px; }
+  .list > li, .cols .list > li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .about .block { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .container { padding-inline: 18px; }
+}
+</style>
+</head>
+<body>
+
+<header class="top container">
+  <div class="intro">
+    <img class="portrait" src="photo.jpg" width="640" height="800" alt="Ting Xu in doctoral regalia in a university library, holding an open book">
+    <div class="intro-text">
+      <h1>Ting Xu, PhD</h1>
+      <p class="title">Scientist, A*STAR <span>&#183; Singapore</span></p>
+      <p class="tagline">I study how screens fit into family life, from early childhood through adolescence, and what that means for how children grow.</p>
+      <div class="links">
+        <a class="btn primary" href="mailto:ting.xu.research@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+          Email
+        </a>
+        <a class="btn" href="https://www.linkedin.com/in/ting-xu-1208x" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"></path></svg>
+          LinkedIn
+        </a>
+        <a class="btn" href="#publications">Publications</a>
+      </div>
+      <span class="email-text">ting.xu.research@gmail.com</span>
+    </div>
+  </div>
+</header>
+
+<nav class="bar" aria-label="Sections">
+  <ul class="container">
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#presentations">Presentations</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#more">Teaching &amp; honors</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="about">
+      <div class="block">
+        <span class="kicker">Now</span>
+        <p>I am a Scientist at A*STAR in Singapore, working with Dr. Jean Wei-Jun Yeung on the <strong>Singapore Longitudinal Early Development Study (SG-LEADS)</strong>. Using the cohort's time diaries and repeated waves, I examine young children's screen time, whether families meet WHO and AAP screen-time guidelines, and how early screen exposure relates to later cognitive, memory, and socio-emotional outcomes.</p>
+      </div>
+      <div class="block">
+        <span class="kicker">PhD</span>
+        <p>I earned my PhD in Family Social Science from the University of Minnesota in 2026, advised by Drs. Xiaoran Sun and Zha Blong Xiong. Much of my doctoral work used Screenomics data: screenshots captured every few seconds while a phone is on, turned into measures of when, how long, and on what adolescents and parents use their phones. My dissertation examined <strong>objective smartphone use and perceived smartphone addiction among adolescents and their parents</strong>, using longitudinal multilevel models.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+    <div class="focus">
+      <span class="kicker">Current focus &#183; SG-LEADS</span>
+      <h3>Early childhood screen time and development in Singapore</h3>
+      <p>Time-diary measures of young children's screen use, how many families meet WHO and AAP screen-time guidelines at different ages, and links to later cognitive, memory, and behavioral outcomes.</p>
+    </div>
+    <div class="themes">
+      <div class="theme">
+        <span class="kicker">Screenomics</span>
+        <h3>What adolescents and parents really do on their phones</h3>
+        <p>Smartphone use during school hours and overnight, measured with high-intensity screenshot data, compared with self-reported smartphone addiction.</p>
+      </div>
+      <div class="theme">
+        <span class="kicker">Family systems</span>
+        <h3>Parallel screens in parent&#8211;adolescent dyads</h3>
+        <p>How parents' and teens' phone use move together, and how parent&#8211;adolescent relationships relate to smartphone addiction.</p>
+      </div>
+      <div class="theme">
+        <span class="kicker">Health &amp; wellbeing</span>
+        <h3>Media, body image, and health behavior</h3>
+        <p>Social media use and weight concerns, and media messages and adolescents' preventive health behaviors.</p>
+      </div>
+      <div class="theme">
+        <span class="kicker">Culture &amp; context</span>
+        <h3>Immigrant families and community schools</h3>
+        <p>Social capital and academic competence among students in Hmongcentric charter schools, and parental control across racial groups.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <ol class="list">
+      <li>
+        <span class="when">2026</span>
+        <div class="what">
+          <h3 class="paper-title">Adolescents&#8217; perceptions of media messages and their preventive health behaviors: A longitudinal study</h3>
+          <div class="authors"><b>Xu, T.</b>, Sun, X., Molaib, K. M., Ram, N., Reeves, B., &amp; Robinson, T. N.</div>
+          <div class="journal"><em>Pediatric Research</em></div>
+          <div class="paper-links"><a href="https://doi.org/10.1038/s41390-026-05075-4" target="_blank" rel="noopener">Read paper &#8594;</a><span class="badge">First author</span></div>
+        </div>
+      </li>
+      <li>
+        <span class="when">2026</span>
+        <div class="what">
+          <h3 class="paper-title">Describing smartphone use among adolescents during school hours using high-intensity objective observations</h3>
+          <div class="authors">Hussein, B. B., Sun, X., Molaib, K. M., <b>Xu, T.</b>, Ram, N., Reeves, B., &amp; Robinson, T.</div>
+          <div class="journal"><em>Child Development</em></div>
+          <div class="paper-links"><a href="https://doi.org/10.1093/chidev/aacag079" target="_blank" rel="noopener">Read paper &#8594;</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="when">2026</span>
+        <div class="what">
+          <h3 class="paper-title">Parents&#8217; perceptions of college student posttraumatic growth during COVID-19</h3>
+          <div class="authors">Dworkin, J., <b>Xu, T.</b>, &amp; Hruska, E.</div>
+          <div class="journal"><em>Adolescents</em>, 6(1), 21</div>
+          <div class="paper-links"><a href="https://doi.org/10.3390/adolescents6010021" target="_blank" rel="noopener">Read paper &#8594;</a><span class="badge">Open access</span></div>
+        </div>
+      </li>
+      <li>
+        <span class="when">2025</span>
+        <div class="what">
+          <h3 class="paper-title">Association of objectively measured social media use with weight concerns and dieting in adolescents</h3>
+          <div class="authors">Sun, X., Molaib, K. M., <b>Xu, T.</b>, Ram, N., Reeves, B., Desai, M., &amp; Robinson, T.</div>
+          <div class="journal"><em>JAMA Pediatrics</em></div>
+          <div class="paper-links"><a href="https://doi.org/10.1001/jamapediatrics.2025.4744" target="_blank" rel="noopener">Read paper &#8594;</a><a href="https://twin-cities.umn.edu/news-events/how-social-media-use-impacts-teen-body-image" target="_blank" rel="noopener">UMN news story &#8594;</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="when">2025</span>
+        <div class="what">
+          <h3 class="paper-title">Hmongcentric niche charter schools: The role of social capital on students&#8217; perceived academic competence</h3>
+          <div class="authors">Xiong, Z. B., <b>Xu, T.</b>, Nickodem, K., &amp; Her, M.</div>
+          <div class="journal"><em>Journal of Southeast Asian American Education and Advancement</em>, 20(1), Article 23</div>
+          <div class="paper-links"><a href="https://doi.org/10.7771/2153-8999.1362" target="_blank" rel="noopener">Read paper &#8594;</a><span class="badge">Open access</span></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="presentations">
+    <h2>Presentations</h2>
+    <h4 class="group-h">Paper presentations</h4>
+    <ul class="list compact">
+      <li><span class="when">May 2026</span><div class="what"><span class="talk-title">The early risers preventive intervention and trajectories of child externalizing problems: An examination of intervention responders and non-responders</span><p>Society for Prevention Research &#183; Washington, D.C.</p></div></li>
+      <li><span class="when">Apr 2026</span><div class="what"><span class="talk-title">Parallel screens? Associations between adolescents&#8217; and parents&#8217; objectively measured smartphone use</span><p>Society for Research on Adolescence &#183; Toronto, Canada &#183; First author</p></div></li>
+      <li><span class="when">Nov 2025</span><div class="what"><span class="talk-title">Objective smartphone use and perceived smartphone addiction among parents of adolescents</span><p>National Council on Family Relations &#183; Baltimore, MD &#183; First author</p></div></li>
+      <li><span class="when">Nov 2025</span><div class="what"><span class="talk-title">Longitudinal associations between objectively measured overnight smartphone use and daytime sleepiness among adolescents</span><p>National Council on Family Relations &#183; Baltimore, MD</p></div></li>
+      <li><span class="when">Nov 2025</span><div class="what"><span class="talk-title">From family context to academic success: Uncovering hidden family experience patterns through unsupervised machine learning</span><p>National Council on Family Relations &#183; Baltimore, MD</p></div></li>
+      <li><span class="when">Nov 2025</span><div class="what"><span class="talk-title">From family experiences to childfree: Exploring the decision not to have kids among young adults with supervised machine learning</span><p>National Council on Family Relations &#183; Baltimore, MD</p></div></li>
+      <li><span class="when">May 2025</span><div class="what"><span class="talk-title">Adolescents&#8217; objective smartphone use and perceived smartphone addiction</span><p>Society for Research in Child Development &#183; Minneapolis, MN &#183; First author</p></div></li>
+      <li><span class="when">Nov 2024</span><div class="what"><span class="talk-title">Describing adolescents&#8217; overnight smartphone use with high-intensity smartphone data</span><p>National Council on Family Relations &#183; Seattle, WA</p></div></li>
+      <li><span class="when">Nov 2024</span><div class="what"><span class="talk-title">What about the parents? Overnight smartphone use in parents of adolescents</span><p>National Council on Family Relations &#183; Seattle, WA</p></div></li>
+    </ul>
+    <h4 class="group-h">Posters</h4>
+    <ul class="list compact">
+      <li><span class="when">Nov 2024</span><div class="what"><span class="talk-title">The enduring importance of in-person communication between parents and adolescents in the digital age</span><p>National Council on Family Relations &#183; Seattle, WA &#183; First author</p></div></li>
+      <li><span class="when">Nov 2023</span><div class="what"><span class="talk-title">Patterns of daily parent smartphone use and associations with parent characteristics</span><p>National Council on Family Relations &#183; Orlando, FL &#183; First author</p></div></li>
+      <li><span class="when">Nov 2023</span><div class="what"><span class="talk-title">Role of social capital in students&#8217; perceived academic competence in 5 Hmongcentric charter schools</span><p>National Council on Family Relations &#183; Orlando, FL &#183; First author</p></div></li>
+      <li><span class="when">Oct 2023</span><div class="what"><span class="talk-title">Adolescents&#8217; perceptions of COVID-19 media messages and their preventive health behaviors</span><p>UNC Winston Center Scientists&#8217; Retreat &#183; Chapel Hill, NC &#183; First author</p></div></li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience &amp; education</h2>
+    <h4 class="group-h">Positions</h4>
+    <ul class="list compact">
+      <li><span class="when">2026&#8211;now</span><div class="what"><h3>Scientist, A*STAR, Singapore</h3><p>Early childhood screen time and development in SG-LEADS, with Dr. Jean Wei-Jun Yeung.</p></div></li>
+      <li><span class="when">2022&#8211;2025</span><div class="what"><h3>Graduate Research Assistant, University of Minnesota</h3><p>NIMH R01 Teen Social Media Management Study, Overnight Smartphone Use Study, Family Machine Learning Study (Add Health), and Hmong Children Longitudinal Study, with Drs. Xiaoran Sun, Zha Blong Xiong, and Jodi Dworkin.</p></div></li>
+      <li><span class="when">2023&#8211;2024</span><div class="what"><h3>Qualitative Researcher, University of Minnesota</h3><p>Interview study of mental health and coping among PhD students, with Dr. Michelle C. Pasco.</p></div></li>
+      <li><span class="when">2023</span><div class="what"><h3>Summer Intern, Parkview Regional Medical Center</h3><p>Intensive smartphone data from parents of infants, with Dr. Brandon McDaniel.</p></div></li>
+      <li><span class="when">2020&#8211;2021</span><div class="what"><h3>Data Manager, Missouri Prevention Science Institute</h3><p>Data management for large longitudinal school-based projects.</p></div></li>
+      <li><span class="when">2019&#8211;2020</span><div class="what"><h3>Senior Research Assistant, UCLA</h3><p>UCLA Middle &amp; High School Diversity Projects, with Drs. Sandra Graham and Jaana Juvonen.</p></div></li>
+    </ul>
+    <h4 class="group-h">Education</h4>
+    <ul class="list compact">
+      <li><span class="when">2026</span><div class="what"><h3>PhD, Family Social Science</h3><p>University of Minnesota, Twin Cities</p></div></li>
+      <li><span class="when">2020</span><div class="what"><h3>MSS, Social Science</h3><p>University of California, Los Angeles</p></div></li>
+      <li><span class="when">2018</span><div class="what"><h3>BM, Social Welfare</h3><p>Wuhan University &#183; Minor in Psychology, Central China Normal University</p></div></li>
+    </ul>
+  </section>
+
+  <section id="more">
+    <h2>Teaching, service &amp; honors</h2>
+    <div class="cols">
+      <div>
+        <h4 class="group-h">Honors</h4>
+        <ul class="list compact">
+          <li><span class="when">2026</span><div class="what"><h3>NCFR Honors Students Award</h3><p>National Council on Family Relations</p></div></li>
+          <li><span class="when">2025&#8211;26</span><div class="what"><h3>David &amp; Karen Olson Dissertation Fellowship</h3><p>University of Minnesota</p></div></li>
+          <li><span class="when">2023&#8211;26</span><div class="what"><h3>BasKnorr Endowed Scholarship</h3><p>University of Minnesota</p></div></li>
+          <li><span class="when">2023, 24</span><div class="what"><h3>Waller Summer Award</h3><p>University of Minnesota</p></div></li>
+        </ul>
+        <h4 class="group-h">Teaching</h4>
+        <ul class="list compact">
+          <li><span class="when">2022&#8211;26</span><div class="what"><h3>Guest Lecturer</h3><p>Family Systems and Diversity, University of Minnesota</p></div></li>
+          <li><span class="when">2024&#8211;25</span><div class="what"><h3>Teaching Assistant</h3><p>Human Development in Families: Lifespan, University of Minnesota</p></div></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="group-h">Service</h4>
+        <ul class="list compact">
+          <li><span class="when">2023&#8211;25</span><div class="what"><h3>Student Representative</h3><p>NCFR Families &amp; Technology Focus Group</p></div></li>
+          <li><span class="when">2024&#8211;25</span><div class="what"><h3>Manager, @FamilyTechFocus</h3><p>Instagram account on healthy technology use in families</p></div></li>
+          <li><span class="when">2024&#8211;26</span><div class="what"><h3>Journal reviewer</h3><p><em>Journal of Research on Adolescence</em>, <em>World Journal of Pediatrics</em>, SRCD; co-reviewer for <em>Journal of Adolescent Health</em></p></div></li>
+        </ul>
+        <h4 class="group-h">Methods &amp; tools</h4>
+        <ul class="chips">
+          <li>Multilevel modeling</li><li>Propensity score weighting</li><li>Multiple imputation</li><li>SEM</li>
+          <li>Latent profile / class analysis</li><li>Machine learning</li><li>Qualitative analysis</li>
+          <li>R</li><li>Python</li><li>Mplus</li><li>NVivo</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>I am glad to hear from researchers, students, and journalists interested in families and technology.</p>
+      <div class="links">
+        <a class="btn primary" href="mailto:ting.xu.research@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+          ting.xu.research@gmail.com
+        </a>
+        <button class="btn" type="button" id="copy-email" data-copy="ting.xu.research@gmail.com">Copy email</button>
+        <a class="btn" href="https://www.linkedin.com/in/ting-xu-1208x" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"></path></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">&#169; 2026 Ting Xu &#183; Singapore</div>
+</footer>
+
+<script>
+(function () {
+  // Copy email
+  var b = document.getElementById('copy-email');
+  b.addEventListener('click', function () {
+    var label = b.textContent;
+    function done(msg) { b.textContent = msg; setTimeout(function () { b.textContent = label; }, 1600); }
+    try {
+      navigator.clipboard.writeText(b.dataset.copy).then(function () { done('Copied'); }, function () { done('Copy failed'); });
+    } catch (e) { done('Copy failed'); }
+  });
+
+  // Highlight the current section in the bar
+  var links = document.querySelectorAll('.bar a');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) links.forEach(function (l) { l.classList.toggle('on', l.getAttribute('href') === '#' + e.target.id); });
+      });
+    }, { rootMargin: '-25% 0px -65% 0px' });
+    document.querySelectorAll('main section').forEach(function (s) { io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
